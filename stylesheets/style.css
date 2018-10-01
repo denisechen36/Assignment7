@@ -1,0 +1,54 @@
+/* flex */
+.flex-container{
+	display:flex;
+	background-color: lightsalmon;
+	flex-direction: row;
+	justify-content: center;
+}
+
+/* only for divs inside flex-container*/
+.flex-container > div {
+	background-color: lightcyan;
+	margin: 30px;
+	padding: 30px;
+	font-size: 30px;
+	width: 250px;
+
+}
+
+/* transition */ 
+.transition {
+	width:100px;
+	height:100px;
+	margin: 100px;
+	background-color: orange;
+	transition: all 4s;
+}
+
+div:hover{
+	background: pink;
+	transform: scale(2);
+	border-radius: 20%;
+}
+
+/* animation */
+@keyframes color-move {
+	0% {background-color: #C70039; left: 0px; top: 0px;}
+	25% {background-color: #C6CB1D; left: 200px; top: 0px;}
+	50% {background-color: #36CA6C; left: 200px; top: 200px;}
+	75% {background-color: #364ACA; left: 0px; top: 200px;}
+	/* to prevent glitchy ending, you have to start from the beginning again: */
+	100% {background-color: #C70039; left: 0px; top: 0px;}
+}
+
+.animation{
+	width: 70px;
+	height: 70px;
+	border-radius: 70px;
+	background-color: mediumpurple;
+	position: relative;
+	animation-name: color-move;
+	animation-duration: 3s;
+	/* infinite = loop, it keeps going! otherwise, choose in seconds: ex. 3s */
+	animation-iteration-count: infinite;
+}
